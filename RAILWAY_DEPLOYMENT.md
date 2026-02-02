@@ -87,7 +87,7 @@ Since Railway doesn't provide an interactive terminal by default, you have two o
 
 4. Run the authentication command:
    ```bash
-   railway run poetry run withings-sync --config-folder /config
+   railway run poetry run withings-sync --config-folder /home/withings-sync/config
    ```
 
 5. Follow the prompts to paste the Withings token

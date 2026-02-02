@@ -3,6 +3,6 @@ builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "sh -c 'mkdir -p /config && echo \"0 */3 * * * poetry run withings-sync --config-folder /config\" > /home/withings-sync/cronjob && supercronic -passthrough-logs /home/withings-sync/cronjob'"
+startCommand = "sh -c 'mkdir -p /home/withings-sync/config && echo \"0 */3 * * * poetry run withings-sync --config-folder /home/withings-sync/config\" > /home/withings-sync/cronjob && supercronic -passthrough-logs /home/withings-sync/cronjob'"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
